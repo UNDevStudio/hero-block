@@ -1,0 +1,47 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "hero-block/hero",
+  "version": "1.0.0",
+  "title": "Hero Block",
+  "category": "design",
+  "icon": "cover-image",
+  "description": "A reusable responsive Gutenberg Hero block.",
+  "attributes": {
+    "imageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "imageId": {
+      "type": "number",
+      "default": 0
+    },
+    "title": {
+      "type": "string",
+      "source": "html",
+      "selector": "h2",
+      "default": "Your Hero Title"
+    },
+    "subtitle": {
+      "type": "string",
+      "source": "html",
+      "selector": "p",
+      "default": "Add your hero subtitle here."
+    },
+    "buttonText": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonUrl": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "align": [
+      "full"
+    ]
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css"
+}

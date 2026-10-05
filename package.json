@@ -1,0 +1,12 @@
+{
+  "name": "hero-block",
+  "version": "1.0.0",
+  "description": "A reusable Gutenberg Hero block.",
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^35.0.0"
+  }
+}
