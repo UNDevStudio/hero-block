@@ -6,7 +6,7 @@
   "title": "Hero Block",
   "category": "design",
   "icon": "cover-image",
-  "description": "A reusable responsive Hero block with image, text, subtitle, and CTA button.",
+  "description": "A reusable responsive Gutenberg Hero block.",
   "attributes": {
     "imageUrl": {
       "type": "string",
