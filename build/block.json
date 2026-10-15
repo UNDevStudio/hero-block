@@ -6,7 +6,7 @@
   "title": "Hero Block",
   "category": "design",
   "icon": "cover-image",
-  "description": "A reusable responsive Gutenberg Hero block.",
+  "description": "A reusable responsive Gutenberg Hero block with style variations and preview controls.",
   "attributes": {
     "imageUrl": {
       "type": "string",
@@ -35,12 +35,17 @@
     "buttonUrl": {
       "type": "string",
       "default": ""
+    },
+    "showPreview": {
+      "type": "boolean",
+      "default": false
     }
   },
   "supports": {
     "align": [
       "full"
-    ]
+    ],
+    "html": false
   },
   "editorScript": "file:./index.js",
   "style": "file:./style-index.css"
