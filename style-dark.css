@@ -1,0 +1,42 @@
+.wp-block-hero-block-hero.is-style-dark {
+	background-color: #172033;
+	color: #ffffff;
+	border: none;
+}
+
+.wp-block-hero-block-hero.is-style-dark .hero-block__background {
+	filter: brightness(0.55);
+	opacity: 1;
+}
+
+.wp-block-hero-block-hero.is-style-dark .hero-block__overlay {
+	background: rgba(15, 23, 42, 0.72);
+	color: #ffffff;
+}
+
+.wp-block-hero-block-hero.is-style-dark .hero-block__title,
+.wp-block-hero-block-hero.is-style-dark .hero-block__subtitle {
+	color: #ffffff;
+}
+
+.wp-block-hero-block-hero.is-style-dark .hero-block__button {
+	background: #ffffff;
+	color: #172033;
+	border-color: #ffffff;
+}
+
+.wp-block-hero-block-hero.is-style-dark .hero-preview {
+	background-color: #172033;
+	color: #ffffff;
+	border: none;
+}
+
+.wp-block-hero-block-hero.is-style-dark .hero-preview .hero-block__background {
+	filter: brightness(0.55);
+	opacity: 1;
+}
+
+.wp-block-hero-block-hero.is-style-dark .hero-preview .hero-block__overlay {
+	background: rgba(15, 23, 42, 0.72);
+	color: #ffffff;
+}

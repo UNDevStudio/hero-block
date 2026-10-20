@@ -1,0 +1,54 @@
+.wp-block-hero-block-hero.is-style-outline {
+	background-color: #f8fafc;
+	color: #172033;
+	border: 3px solid #64748b;
+	border-radius: 8px;
+}
+
+.wp-block-hero-block-hero.is-style-outline .hero-block__background {
+	opacity: 0.12;
+	filter: grayscale(100%);
+}
+
+.wp-block-hero-block-hero.is-style-outline .hero-block__overlay {
+	background: transparent;
+	color: #172033;
+}
+
+.wp-block-hero-block-hero.is-style-outline .hero-block__title,
+.wp-block-hero-block-hero.is-style-outline .hero-block__subtitle {
+	color: #172033;
+}
+
+.wp-block-hero-block-hero.is-style-outline .hero-block__button {
+	background: transparent;
+	color: #172033;
+	border: 2px solid #172033;
+}
+
+.wp-block-hero-block-hero.is-style-outline .hero-preview {
+	background-color: #f8fafc;
+	color: #172033;
+	border: 3px solid #64748b;
+}
+
+.wp-block-hero-block-hero.is-style-outline .hero-preview .hero-block__background {
+	opacity: 0.12;
+	filter: grayscale(100%);
+}
+
+.wp-block-hero-block-hero.is-style-outline .hero-preview .hero-block__overlay {
+	background: transparent;
+	color: #172033;
+}
+
+.wp-block-hero-block-hero.is-style-outline .hero-preview .hero-block__title,
+.wp-block-hero-block-hero.is-style-outline .hero-preview .hero-block__subtitle {
+	color: #172033;
+}
+
+.wp-block-hero-block-hero.is-style-outline .hero-preview .hero-block__button {
+	background: transparent;
+	color: #172033;
+	border-color: #172033;
+}

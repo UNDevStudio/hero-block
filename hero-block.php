@@ -1,4 +1,3 @@
-
 <?php
 /**
  * Plugin Name: Hero Block
@@ -20,19 +19,82 @@ function hero_block_register() {
 add_action( 'init', 'hero_block_register' );
 
 /**
- * Enqueue Hero block styles on the frontend.
+ * Register Hero block style variations.
  */
-function hero_block_enqueue_styles() {
-	wp_enqueue_block_style(
+function hero_block_register_styles() {
+	register_block_style(
 		'hero-block/hero',
 		array(
-			'handle' => 'hero-block-frontend-styles',
-			'src'    => plugin_dir_url( __FILE__ ) . 'build/style-index.css',
-			'path'   => __DIR__ . '/build/style-index.css',
-			'ver'    => file_exists( __DIR__ . '/build/style-index.css' )
-				? filemtime( __DIR__ . '/build/style-index.css' )
-				: '1.1.0',
+			'name'       => 'dark',
+			'label'      => __( 'Dark', 'hero-block' ),
+			'is_default' => true,
+		)
+	);
+
+	register_block_style(
+		'hero-block/hero',
+		array(
+			'name'  => 'light',
+			'label' => __( 'Light', 'hero-block' ),
+		)
+	);
+
+	register_block_style(
+		'hero-block/hero',
+		array(
+			'name'  => 'outline',
+			'label' => __( 'Outline', 'hero-block' ),
 		)
 	);
 }
-add_action( 'init', 'hero_block_enqueue_styles' );
+add_action( 'init', 'hero_block_register_styles' );
+
+/**
+ * Enqueue the base Hero block stylesheet.
+ */
+function hero_block_enqueue_base_styles() {
+	$css_file = __DIR__ . '/build/style-index.css';
+
+	if ( file_exists( $css_file ) ) {
+		wp_enqueue_block_style(
+			'hero-block/hero',
+			array(
+				'handle' => 'hero-block-base-styles',
+				'src'    => plugin_dir_url( __FILE__ ) . 'build/style-index.css',
+				'path'   => $css_file,
+				'ver'    => filemtime( $css_file ),
+			)
+		);
+	}
+}
+add_action( 'init', 'hero_block_enqueue_base_styles' );
+
+/**
+ * Enqueue the separate Hero block theme stylesheets.
+ */
+function hero_block_enqueue_theme_styles() {
+	$styles = array(
+		'dark'    => 'style-dark.css',
+		'light'   => 'style-light.css',
+		'outline' => 'style-outline.css',
+	);
+
+	foreach ( $styles as $style_name => $filename ) {
+		$css_file = __DIR__ . '/' . $filename;
+
+		if ( ! file_exists( $css_file ) ) {
+			continue;
+		}
+
+		wp_enqueue_block_style(
+			'hero-block/hero',
+			array(
+				'handle' => 'hero-block-' . $style_name . '-styles',
+				'src'    => plugin_dir_url( __FILE__ ) . $filename,
+				'path'   => $css_file,
+				'ver'    => filemtime( $css_file ),
+			)
+		);
+	}
+}
+add_action( 'init', 'hero_block_enqueue_theme_styles' );
